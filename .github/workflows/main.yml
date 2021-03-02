@@ -4,9 +4,8 @@ on: [push]
 jobs:
   build:
     name: test
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@v2
-    - run: g++ t.cpp && ./a.out
-    - run: clang++ t.cpp && ./a.out
+	- run: go run t.go
 
