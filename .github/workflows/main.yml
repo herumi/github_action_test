@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: node
       uses: actions/setup-node@v1
-    - run: node test.js
+    - run: g++ t.cpp && ./a.out
+    - run: clang++ t.cpp && ./a.out
 
