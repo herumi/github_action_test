@@ -10,5 +10,14 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@v2
-    - run: go run t.go
+    - name: linux
+      if: runner.os == 'Linux'
+        run: echo linux
+        run: ls
+    - name: mac
+      if: unner.os == 'macOS'
+        run: brew install nasm
+        run: echo mac
+        run: ls
+
 
