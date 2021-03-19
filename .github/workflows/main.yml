@@ -21,5 +21,11 @@ jobs:
         brew install nasm
         echo mac
         ls
-
+    - name: windows
+      if: runner.os == 'Windows'
+      run: |
+        choco install nasm
+        nasm -v
+        clang++ t.cpp -o t.exe
+        ./t.exe
 
