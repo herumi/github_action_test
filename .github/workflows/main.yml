@@ -16,7 +16,7 @@ jobs:
         echo linux
         ls
     - name: mac
-      if: unner.os == 'macOS'
+      if: runner.os == 'macOS'
       run: |
         brew install nasm
         echo mac
