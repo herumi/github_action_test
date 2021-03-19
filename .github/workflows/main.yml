@@ -12,12 +12,14 @@ jobs:
     - uses: actions/checkout@v2
     - name: linux
       if: runner.os == 'Linux'
-        run: echo linux
-        run: ls
+      run: |
+        echo linux
+        ls
     - name: mac
       if: unner.os == 'macOS'
-        run: brew install nasm
-        run: echo mac
-        run: ls
+      run: |
+        brew install nasm
+        echo mac
+        ls
 
 
